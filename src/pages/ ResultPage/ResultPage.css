@@ -1,0 +1,94 @@
+.hero-section {
+    background-color: #303030;
+    display: flex;
+    color: white;
+    height: 100vh;
+    padding-bottom: 3rem;
+  }
+  
+  .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .calculator-redirect {
+    visibility: hidden;
+  }
+  .header-content {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 4rem;
+    margin-top: -2rem;
+  }
+  
+  .pointer-icon {
+    height: 24px;
+    width: 112px;
+  }
+  
+  .hero-heading {
+    font-size: 36px;
+    white-space: nowrap;
+    color: white;
+  }
+  
+  .ivf-cycle-count {
+    text-align: center;
+    margin-top: 2rem;
+  }
+  .image-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    margin-right: -4rem;
+  }
+  .image-container img {
+    height: 90%;
+  }
+  .private-consultation {
+    visibility: hidden;
+  }
+  @media (max-width: 600px) {
+    .hero-section {
+      padding-top: 1rem;
+    }
+    .hero-heading {
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 24px;
+    }
+    .circularProgress {
+      margin-top: -5rem;
+    }
+    .pointer-icon {
+      margin-left: -7rem;
+    }
+    .hero-section {
+      display: block;
+    }
+    .content {
+      gap: 1rem;
+    }
+    .calculator-redirect {
+      visibility: visible;
+      color: white;
+      margin-top: 0;
+      margin-bottom: 0.5rem;
+    }
+    .image-container {
+      height: auto;
+    }
+    .private-consultation{
+      visibility: visible;
+      width: 100%;
+      padding: 20px;
+    }
+    .private-consultation > button{
+      width: 100%;
+    }
+  }
+  

@@ -1,0 +1,7 @@
+.breadcrum-container {
+  /* display: flex; */
+  padding: 40px;
+  margin-left: 56px;
+  gap: 16px;
+  font-weight: normal;
+}
