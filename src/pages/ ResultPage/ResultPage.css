@@ -1,94 +1,104 @@
 .hero-section {
-    background-color: #303030;
-    display: flex;
-    color: white;
-    height: 100vh;
-    padding-bottom: 3rem;
+  background-color: #303030;
+  display: flex;
+  color: white;
+  height: 100vh;
+  padding-bottom: 3rem;
+}
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.calculator-redirect {
+  visibility: hidden;
+}
+.header-content {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 4rem;
+  margin-top: -2rem;
+}
+.pointer-icon {
+  height: 24px;
+  width: 112px;
+}
+.hero-heading {
+  font-size: 36px;
+  white-space: nowrap;
+  color: white;
+}
+.ivf-cycle-count {
+  text-align: center;
+  margin-top: 2rem;
+}
+.image-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  margin-right: -4rem;
+}
+.image-container img {
+  height: 90%;
+  position: relative;
+  z-index: 1;
+}
+.circle-overlay {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 600px;
+  height: 600px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(0, 128, 0, 0.6) 0%, rgba(0, 255, 0, 0.2) 70%, rgba(0, 128, 0, 0) 100%); /* Green shadow effect */
+  filter: blur(30px);
+  z-index: 0;
+}
+.private-consultation {
+  visibility: hidden;
+}
+@media (max-width: 600px) {
+  .hero-section {
+    padding-top: 1rem;
   }
-  
+  .hero-heading {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+  }
+  .circularProgress {
+    margin-top: -5rem;
+  }
+  .pointer-icon {
+    margin-left: -7rem;
+  }
+  .hero-section {
+    display: block;
+  }
   .content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    gap: 1rem;
   }
   .calculator-redirect {
-    visibility: hidden;
-  }
-  .header-content {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    margin-bottom: 4rem;
-    margin-top: -2rem;
-  }
-  
-  .pointer-icon {
-    height: 24px;
-    width: 112px;
-  }
-  
-  .hero-heading {
-    font-size: 36px;
-    white-space: nowrap;
+    visibility: visible;
     color: white;
-  }
-  
-  .ivf-cycle-count {
-    text-align: center;
-    margin-top: 2rem;
+    margin-top: 0;
+    margin-bottom: 0.5rem;
   }
   .image-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 100%;
-    margin-right: -4rem;
-  }
-  .image-container img {
-    height: 90%;
+    height: auto;
   }
   .private-consultation {
-    visibility: hidden;
+    visibility: visible;
+    width: 100%;
+    padding: 20px;
   }
-  @media (max-width: 600px) {
-    .hero-section {
-      padding-top: 1rem;
-    }
-    .hero-heading {
-      font-size: 16px;
-      font-weight: 500;
-      line-height: 24px;
-    }
-    .circularProgress {
-      margin-top: -5rem;
-    }
-    .pointer-icon {
-      margin-left: -7rem;
-    }
-    .hero-section {
-      display: block;
-    }
-    .content {
-      gap: 1rem;
-    }
-    .calculator-redirect {
-      visibility: visible;
-      color: white;
-      margin-top: 0;
-      margin-bottom: 0.5rem;
-    }
-    .image-container {
-      height: auto;
-    }
-    .private-consultation{
-      visibility: visible;
-      width: 100%;
-      padding: 20px;
-    }
-    .private-consultation > button{
-      width: 100%;
-    }
+  .private-consultation > button {
+    width: 100%;
   }
-  
+}

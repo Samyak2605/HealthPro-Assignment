@@ -1,14 +1,15 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import logo from "../../assets/images/logos/ivf-pulse-logo.png";
 import "./Header.css";
 import Hamburger from "hamburger-react";
-import { useState } from "react";
-
+import FormModal from "../formModal/FormModal";
 function Header() {
-  // const [isSmallScreen, setSmallScreen] = useState(false);
-  // // setSmallScreen(window.innerWidth < 768);
-  // console.log(window.innerWidth < 768);
   const [isOpen, setOpen] = useState(false);
+  const [isFormOpen, setFormOpen] = useState(false);
+  const openForm = () => {
+    setFormOpen(true);
+  };
   return (
     <>
       <div className="header-container">
@@ -22,7 +23,7 @@ function Header() {
           <Link>Infertility Treatments</Link>
           <Link>IVF Testing</Link>
           <Link>About Us</Link>
-          <button className="talk-button">
+          <button className="talk-button" onClick={openForm}>
             Talk to Us <span className="arrow">→</span>
           </button>
         </div>
@@ -38,11 +39,11 @@ function Header() {
           <Link>Infertility Treatments</Link>
           <Link>IVF Testing</Link>
           <Link>About Us</Link>
-          <button>Talk to Us</button>
+          <button onClick={openForm}>Talk to Us</button>
         </div>
       )}
+      {isFormOpen && <FormModal closeForm={() => setFormOpen(false)} />}
     </>
   );
 }
-
 export default Header;

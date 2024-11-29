@@ -1,30 +1,28 @@
 import { useEffect, useState } from "react";
 import "./Breadcrum.css";
-import { useLocation } from "react-router-dom";
-
+import { useLocation, Link } from "react-router-dom";
 function Breadcrum() {
   const path = useLocation().pathname;
-  const [isResultPage, setIsResultPage] = useState(false)
+  const [isResultPage, setIsResultPage] = useState(false);
   useEffect(() => {
-    if (path == "/result") {
-      setIsResultPage(true)
+    if (path === "/result") {
+      setIsResultPage(true);
     }
-  }, [path])
+  }, [path]);
   return (
     <>
       <div className="breadcrum-container hidden sm:flex">
-        <span>Home</span>
+        <Link to="/" className="breadcrumb-link">Home</Link>
         <span>/</span>
-        <span>IVF Success Rate Calculator</span>
-        {isResultPage &&
+        <span className="breadcrumb-text">IVF Success Rate Calculator</span>
+        {isResultPage && (
           <>
-          <span>/</span>
-          <span>Result</span>
+            <span>/</span>
+            <span>Result</span>
           </>
-        }
+        )}
       </div>
     </>
   );
 }
-
 export default Breadcrum;
